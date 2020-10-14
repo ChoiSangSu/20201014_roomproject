@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="rfileMapper">
+
+<insert id="insert" >
+		<selectKey keyProperty="rnum" resultType="int" order="BEFORE"> 
+			select ifnull( max(rnum+1), 1) from rfile
+		</selectKey>
+		insert into rfile (rnum,roomid,filename) 
+		values (#{rnum}, #{roomid},#{filename})
+	</insert>
+	<update id="update">
+		update rfile 
+		set 
+			filename = #{filename} 
+		where fnum = #{fnum}	
+	</update>	
+	<delete id="delete">
+		delete from rfile where rnum = #{rnum}
+	</delete>
+	<select id="selectList" resultType="RfileDTO">
+		select * from rfile where roomid = #{roomid}
+	</select>
+
+
+</mapper>

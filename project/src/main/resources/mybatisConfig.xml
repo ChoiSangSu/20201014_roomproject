@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 널값 허용 -->
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+	<typeAliases>
+		<typeAlias type="com.project.dto.BoardDTO" alias="BoardDTO"/>
+		<typeAlias type="com.project.dto.BFileDTO" alias="BFileDTO"/>
+		<typeAlias type="com.project.dto.ReplyDTO" alias="ReplyDTO"/>
+		<typeAlias type="com.project.dto.MemberDTO" alias="MemberDTO"/>
+		<typeAlias type="com.project.dto.RoommasterDTO" alias="RoommasterDTO"/> 
+		<typeAlias type="com.project.dto.ReserveDTO" alias="ReserveDTO"/> 
+		<typeAlias type="com.project.dto.RfileDTO" alias="RfileDTO"/> 
+	</typeAliases>
+</configuration>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="roommasterMapper">
+	<insert id="insert" parameterType="RoommasterDTO">
+		<selectKey keyProperty="roomid" resultType="string" order="BEFORE"> 
+			select concat('R',lpad(ifnull(max(right(roomid,3))+1,1),3,'0')) from roommaster
+		</selectKey>
+		insert into roommaster(roomid,roomname,content1,content2,content3) value (#{roomid},#{roomname},#{content1},#{content2},#{content3})
+	</insert>
+
+	<update id="update">
+		update roommaster
+		set roomname = #{roomname}
+		where roomid=#{roomid}
+	</update>
+
+	<update id="delete">
+		delete from roommaster where roomid=#{roomid}
+	</update>
+	
+	<select id="selectList" resultType="hashmap">
+		select * from roommaster rm, rfile rf where rm.roomid = rf.roomid;
+	</select>
+
+</mapper>
