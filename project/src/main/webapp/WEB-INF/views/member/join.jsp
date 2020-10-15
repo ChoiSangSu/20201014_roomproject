@@ -62,7 +62,7 @@ function main() {
                         <form id="joinForm" class="form" action="${path}/member/" method="post">
                             <h3 class="text-center text-info">회원 가입</h3>
                             <div class="form-group">
-                                <label for="userid" class="text-info">이름</label><br>
+                                <label for="userid" class="text-info">아이디</label><br>
                                 <input type="text" name="userid" id="userid" class="form-control">
                             </div>
                             <div class="form-group">

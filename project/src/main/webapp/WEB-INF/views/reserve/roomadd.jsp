@@ -45,11 +45,11 @@
 				<div id="Mypage-column" class="col-md-6">
 					<div id="Mypage-box" class="col-md-12">
 
-						<form id="roomAdd" class="Add" >
+						<form id="Add" class="Add" >
 							<h3 class="text-center text-info">방 등록</h3>
 							<div class="form-group">
 								<label for="filename" class="text-info">방 사진</label><br>
-								<input type="file" name="filename" id="filename"
+								<input type="file" name="files" id="files"
 									class="form-control">
 							</div>
 							<div class="form-group">

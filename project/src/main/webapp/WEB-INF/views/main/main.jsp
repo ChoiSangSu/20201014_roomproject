@@ -126,7 +126,7 @@
 			</div>
 		</div>
 		<section>
-			<iframe name="myframe" id="myframe" src="${path}/main/slider" scrolling="no">
+			<iframe name="myframe" id="myframe" src="${path}/main/slider">
 			</iframe>
 		</section>
 </body>
